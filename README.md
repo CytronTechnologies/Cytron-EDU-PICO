@@ -1,10 +1,10 @@
 # Cytron-EDU-PICO
-Unlock the full potential of Raspberry Pi Pico W with our [EDU PICO Project and Innovation Kit]() – an all-in-one solution designed to inspire creativity, foster learning, and fuel innovation.  
+Unlock the full potential of [Raspberry Pi Pico W]() with our [EDU PICO Project and Innovation Kit](https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w) – an all-in-one solution designed to inspire creativity, foster learning, and fuel innovation.  
 
 ## Requirements  
 To get started, you will need the following hardware and software:  
 **Hardware:**  
-* [EDU PICO](https://www.cytron.io/)  
+* [EDU PICO](https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w)  
 
 **Software:**  
 To upload the code to the Raspberry Pi Pico W on the EDU PICO, you need to install the CircuitPython firmware:
@@ -14,7 +14,7 @@ To upload the code to the Raspberry Pi Pico W on the EDU PICO, you need to insta
 EDU PICO already included a guidance book, but if you need online resources feel free to check out our [EDU PICO Resources Hub]()  
 
 Or visit our product page to check out other resources here:  
-*[Cytron Product Resources]()  
+* [Cytron Product Resources](https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w#tab-resource)  
 
 ## Support  
 If you need further assistance, we welcome you to our [technical forum](http://forum.cytron.io) or you can contact us through email support@cytron.io where our team will be happy to assist you. 
