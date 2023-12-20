@@ -1,4 +1,4 @@
-# Cytron-EDU-PICO
+# Cytron EDU PICO
 Unlock the full potential of [Raspberry Pi Pico W](https://www.cytron.io/p-raspberry-pi-pico-wireless-board-smd-presoldered-headers) with our [EDU PICO Project and Innovation Kit](https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w) – an all-in-one solution designed to inspire creativity, foster learning, and fuel innovation.  
 
 ![edu-pico--boar-layout](https://github.com/CytronTechnologies/Cytron-EDU-PICO/blob/main/images/edu-pico-board-layout.png)
