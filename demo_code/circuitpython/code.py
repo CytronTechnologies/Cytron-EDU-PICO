@@ -212,8 +212,11 @@ except Exception as e:
     oled.show()
     time.sleep(10)
     
-finally:
-    edu_splash_screen.deinit_module()
-    edu_buttons.deinit_module()
-    deinit_module(module)
-    deinit_oled()
+finally:        
+    try:
+        edu_splash_screen.deinit_module()
+        edu_buttons.deinit_module()
+        deinit_module(module)
+    finally:
+        deinit_oled()
+    
