@@ -217,6 +217,8 @@ finally:
         edu_splash_screen.deinit_module()
         edu_buttons.deinit_module()
         deinit_module(module)
-    finally:
+        deinit_oled()
+    except:
+        # make sure to deinit the I2C pins to avoid error on other program run later on
         deinit_oled()
     

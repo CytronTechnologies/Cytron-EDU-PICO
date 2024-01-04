@@ -29,7 +29,6 @@ def init_module(i2c):
     
     global interval
     interval = time.monotonic()
-    print(interval)
 
 def run_module(duration, oled):
     global interval

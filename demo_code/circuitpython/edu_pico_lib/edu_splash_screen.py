@@ -75,7 +75,11 @@ def group_animate(IMAGE_FILE, SPRITE_SIZE, frame, invert, duration):
     group = displayio.Group()
     group.append(icon_grid)
     
-    display.show(group)
+    try:
+        display.show(group)
+    except AttributeError:
+        # For Circuitpython 9.x.x and above
+        display.root_group = group
     interval = 0
     pointer = 0
     running = True
