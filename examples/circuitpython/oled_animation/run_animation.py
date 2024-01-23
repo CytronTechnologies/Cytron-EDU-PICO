@@ -20,11 +20,9 @@ import board, busio, displayio, time
 import adafruit_displayio_ssd1306
 import adafruit_imageload
 
-cytron_intro_img = "intro_cytron_20_frames.bmp"
-
+BMP_FILENAME = "intro_cytron_20_frames.bmp"
 SPRITE_SIZE = (128, 64)
-
-cytron_intro_frames= 20
+BMP_FRAMES = 20
 
 # Define the i2c GPIOs on SCL=GP5 and SDA=GP4
 i2c = busio.I2C(board.GP5, board.GP4)
@@ -73,5 +71,5 @@ def group_animate(IMAGE_FILE, SPRITE_SIZE, frame, invert, duration):
     group.remove(icon_grid)
     
 while True:    
-    group_animate(cytron_intro_img, SPRITE_SIZE, cytron_intro_frames, invert=False, duration=0.1)
+    group_animate(BMP_FILENAME, SPRITE_SIZE, BMP_FRAMES, invert=False, duration=0.1)
     time.sleep(1)

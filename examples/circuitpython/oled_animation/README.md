@@ -12,10 +12,15 @@ To install on Thonny need to navigate to ``Tools>Manage packages...``. Search th
 Ensure that the GIF file resides in the same directory as your Python file. Then run ``convert_gif_to_bmp.py`` to convert the GIF into a BMP image.
 Set below parameter to adjust the image:
 ```
-INPUT_FILENAME = "intro_cytron.gif"
+GIF_FILENAME = "intro_cytron.gif"
 BW_THRESHOLD = 90
 OUTPUT_SIZE = (128,64)
 INVERT_COLOUR = False
 ```
 
-Copy the BMP image on your Circuitpython Drive and run the code ``run_animation.py``.
+Copy the BMP image on your Circuitpython Drive and run the code ``run_animation.py``. Remember to edit the parameter below if you made any changes:  
+```
+BMP_FILENAME = "intro_cytron_20_frames.bmp"
+SPRITE_SIZE = (128, 64)
+BMP_FRAMES = 20
+```
