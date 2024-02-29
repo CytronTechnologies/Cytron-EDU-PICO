@@ -10,10 +10,13 @@ To get started, you will need the following hardware and software:
 
 **Software:**  
 To upload the code to the Raspberry Pi Pico W on the EDU PICO, you need to install the CircuitPython firmware:
-* [EDU PICO for Pico W CircuitPython Firmware](https://circuitpython.org/board/cytron_edu_pico_w/)  
+* [EDU PICO for Pico W CircuitPython Firmware](https://circuitpython.org/board/cytron_edu_pico_w/)
+  
+This firmware for EDU PICO includes pre-compiled libraries that are used in the guidance book.
+
   
 ## Resources 
-EDU PICO already included a guidance book, but if you need online resources feel free to check out our [EDU PICO Resources Hub](https://sites.google.com/cytron.io/edupico-resource-hub/home_1)  
+EDU PICO already come with a guidance book, but if you need online resources feel free to check out our [EDU PICO Resources Hub](https://sites.google.com/cytron.io/edupico-resource-hub/home_1).  
 
 Or visit our product page to check out other resources here:  
 * [Cytron EDU PICO Product Resources](https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w#tab-resource)  
