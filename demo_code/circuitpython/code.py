@@ -15,28 +15,32 @@ MORE INFO:
 https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w
 https://circuitpython.org/board/raspberry_pi_pico_w
 """
-import board
-import busio
-import adafruit_ssd1306
-import time
-from edu_pico_lib import edu_splash_screen
-from edu_pico_lib import edu_buttons
-from edu_pico_lib import edu_neopixel
-from edu_pico_lib import edu_aht20
-from edu_pico_lib import edu_apds9960_proximity
-from edu_pico_lib import edu_apds9960_light
-from edu_pico_lib import edu_apds9960_gesture
-from edu_pico_lib import edu_apds9960_colour
-from edu_pico_lib import edu_pdm_microphone
-from edu_pico_lib import edu_potentiometer
-from edu_pico_lib import edu_audio_buzzer
-from edu_pico_lib import edu_sd_card
-from edu_pico_lib import edu_pico_log_switch
-from edu_pico_lib import edu_servo
-from edu_pico_lib import edu_motor
-from edu_pico_lib import edu_usb_relay
-import gc
-
+import microcontroller
+try:
+    import board
+    import busio
+    import adafruit_ssd1306
+    import time
+    from edu_pico_lib import edu_splash_screen
+    from edu_pico_lib import edu_buttons
+    from edu_pico_lib import edu_neopixel
+    from edu_pico_lib import edu_aht20
+    from edu_pico_lib import edu_apds9960_proximity
+    from edu_pico_lib import edu_apds9960_light
+    from edu_pico_lib import edu_apds9960_gesture
+    from edu_pico_lib import edu_apds9960_colour
+    from edu_pico_lib import edu_pdm_microphone
+    from edu_pico_lib import edu_potentiometer
+    from edu_pico_lib import edu_audio_buzzer
+    from edu_pico_lib import edu_sd_card
+    from edu_pico_lib import edu_pico_log_switch
+    from edu_pico_lib import edu_servo
+    from edu_pico_lib import edu_motor
+    from edu_pico_lib import edu_usb_relay
+    import gc
+except:
+    print("Reset the microcontroller")
+    microcontroller.reset()
 
 def init_i2c():
     global i2c
