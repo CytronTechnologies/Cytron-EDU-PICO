@@ -15,12 +15,12 @@ MORE INFO:
 https://www.cytron.io/p-edu-project-and-innovation-kits-for-pico-w
 https://circuitpython.org/board/raspberry_pi_pico_w
 """
-import microcontroller
+import board
+import busio
+import adafruit_ssd1306
+import time
+import gc
 try:
-    import board
-    import busio
-    import adafruit_ssd1306
-    import time
     from edu_pico_lib import edu_splash_screen
     from edu_pico_lib import edu_buttons
     from edu_pico_lib import edu_neopixel
@@ -37,11 +37,9 @@ try:
     from edu_pico_lib import edu_servo
     from edu_pico_lib import edu_motor
     from edu_pico_lib import edu_usb_relay
-    import gc
 except:
-    print("Reset the microcontroller")
-    microcontroller.reset()
-
+    print("Could not find edu_pico_lib")
+    
 def init_i2c():
     global i2c
     i2c = busio.I2C(board.GP5, board.GP4)
