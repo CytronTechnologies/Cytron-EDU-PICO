@@ -1,6 +1,4 @@
-# Raspberry Pi Pico: http://educ8s.tv/part/RaspberryPiPico
-# OLED DISPLAY: https://educ8s.tv/part/OLED096
-
+#Import necessary libraries
 import board, busio, displayio, time
 import adafruit_displayio_ssd1306
 import adafruit_imageload
