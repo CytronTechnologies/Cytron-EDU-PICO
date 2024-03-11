@@ -38,7 +38,7 @@ try:
     from edu_pico_lib import edu_motor
     from edu_pico_lib import edu_usb_relay
 except:
-    print("Could not find edu_pico_lib")
+    print("Could not import edu_pico_lib")
     
 def init_i2c():
     global i2c
