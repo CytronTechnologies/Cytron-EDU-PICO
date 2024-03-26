@@ -20,11 +20,11 @@ import adafruit_ssd1306
 import os
 from adafruit_apds9960.apds9960 import APDS9960
 
-#Define the i2C GPIOsvand Oled Display.
+# Define the i2C GPIOs and Oled Display.
 i2c = busio.I2C(board.GP5, board.GP4)
 oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
 
-#Initialize the APDS9960 Gesture Sensor
+# Initialize the APDS9960 Gesture Sensor
 multi_sensor = APDS9960(i2c)
 multi_sensor.enable_proximity = True
 multi_sensor.enable_gesture = True
@@ -33,17 +33,17 @@ multi_sensor.enable_gesture = True
 buttonA = digitalio.DigitalInOut(board.GP0)
 buttonB = digitalio.DigitalInOut(board.GP1)
 
-#Define Audio Left and Right Channel
+# Define Audio Left and Right Channel
 dac = audiopwmio.PWMAudioOut(left_channel=board.GP20, right_channel=board.GP21)
 
-#Initialize SD Card GPIOs
+# Initialize SD Card GPIOs
 spi = busio.SPI(clock=board.GP18, MOSI=board.GP19, MISO=board.GP16)
 cs = board.GP17
 sd = sdcardio.SDCard(spi, cs)
 vfs = storage.VfsFat(sd)
 storage.mount(vfs, '/sd')
 
-#Oled Display Startup Menu
+# Oled Display Startup Menu
 oled.fill(0)
 oled.show()
 oled.text("Press Yellow to Start!", 1, 45, 1)
@@ -57,10 +57,10 @@ buttonB_release = True
 buttonA_pressed = False
 buttonB_pressed = False
 
-#Define Music Filename // Put ".wav" at last of your music name. example = Birthday.wav
+# Define Music Filename. Put ".wav" at last of your music name. example = Birthday.wav
 song_array = ["Music_1.wav","Music_2.wav","Music_3.wav","Music_4.wav"]
 
-#Define First music you want it To be play
+# Define First music you want it to be play.
 wavfile = open("/sd/Music_1.wav", "rb")
 wav0 = audiocore.WaveFile(wavfile)
 
@@ -72,13 +72,13 @@ def waveFiles(waveNames):
         wavArray.append(wav1)
     return wavArray
 
-#Music Track Sort
+# Music Track Sort.
 wavArray = waveFiles(song_array)
 lengthArray = len(wavArray)
 counter = 0
 start_song = False
 
-#List all Music in the SD Card (.wav only)
+# List all Music in the SD Card (.wav only).
 wav_filename = []
 for filename in os.listdir('/sd'):
     if filename.lower().endswith('.wav') and not filename.startswith('.'):
@@ -144,7 +144,7 @@ while True:
             oled.text("Music: {}".format(wav_filename[counter]), 1, 30, 1)
             oled.show()
             
-        if gesture == 3:#left
+        if gesture == 3:#Left
             print("Previous Song")
             dac.pause()
             counter-=1
@@ -158,7 +158,7 @@ while True:
             oled.text("Slide Up To Play!", 15, 50, 1)
             oled.show()           
             
-        if gesture == 4:#right
+        if gesture == 4:#Right
             print("Next Song")
             dac.pause()
             counter+=1
